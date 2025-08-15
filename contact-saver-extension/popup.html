@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacts</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="Icon" class="popup-icon" />
+    <h1>Contacts</h1>
+    <button id="addBtn" class="add-btn" title="Add contact">＋ Add</button>
+  </div>
+
+  <div class="table-wrap">
+    <table id="contactsTable" aria-label="Contacts table">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>PHONE</th>
+          <th>EMAIL</th>
+          <th>RELATIONSHIP</th>
+          <th>DELETE</th>
+          <th>CHANGE</th>
+        </tr>
+      </thead>
+      <tbody id="contactsBody">
+        <!-- rows injected here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal form for Add / Edit -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle">Add contact</h2>
+      <form id="contactForm">
+        <input type="hidden" id="contactId" value="">
+        <label>
+          Name
+          <input id="name" type="text" required maxlength="100" />
+        </label>
+
+        <label>
+          Phone
+          <input id="phone" type="tel" required maxlength="30" />
+        </label>
+
+        <label>
+          Email
+          <input id="email" type="email" maxlength="254" />
+        </label>
+
+        <label>
+          Relationship
+          <input id="relationship" type="text" maxlength="100" />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
