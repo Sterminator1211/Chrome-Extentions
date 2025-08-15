@@ -1,0 +1,47 @@
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+    width: 250px;
+    background-color: teal;
+    color: white; /* optional, makes text visible on teal */
+}
+
+#header {
+  background: #4CAF50;
+  padding: 5px;
+}
+
+#addBtn {
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+#notesContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.note {
+  background: white;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.deleteBtn {
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
